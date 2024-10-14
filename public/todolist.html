@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <button id="signOutButton">Sign Out</button>
+        <div id="userStatus"></div>
+        <div class="container">
+            <h1>To-Do List</h1>
+            <input type="text" id="todoInput" placeholder="Add a task...">
+            <button id="addButton">Add</button>
+            <button id="clearButton">Clear All</button>
+            <ul id="todoList"></ul>
+            <button id="deleteButton" style="display:none; background-color: red; color: white;">Delete Selected</button>
+        </div>
+    </div>
+    <script type="module" src="todolist.js"></script>
+</body>
+</html>

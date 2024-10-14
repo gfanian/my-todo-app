@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+#app {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#authContainer {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+#authContainer input, #authContainer button {
+    margin: 5px 0;
+}
+
+#userStatus {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Styling for selected tasks */
+.selected {
+    background-color: #ff6677; /* Stronger red background */
+    border: 2px solid red; /* Red border around the selected task */
+    text-decoration: line-through; /* Strikethrough text */
+    color: white; /* Change text color to white for contrast */
+}
+
+/* Animation for selecting a task (from white to red) */
+@keyframes selectTask {
+    from {
+      background-color: white;
+      color: black;
+    }
+    to {
+      background-color: #ff6666; /* Red background */
+      color: white;
+    }
+  }
+  
+  /* Animation for deselecting a task (from red to white) */
+  @keyframes deselectTask {
+    from {
+      background-color: #ff6666; /* Red background */
+      color: white;
+    }
+    to {
+      background-color: white;
+      color: black;
+    }
+  }  
+
+/* Fade-in effect for new tasks */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  /* Keyframes for fade-in animation */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+
+/* Default task style */
+li {
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* When a task is selected */
+  li.selected {
+    animation: selectTask 0.5s forwards; /* Apply select animation */
+    border: 2px solid red;
+    text-decoration: line-through;
+  }
+  
+  /* When a task is deselected */
+  li.deselected {
+    animation: deselectTask 0.5s forwards; /* Apply deselect animation */
+    border: 2px solid transparent;
+    text-decoration: none;
+  }
+  
+  
+
+
+
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.auth-page {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.todo-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#signOutButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
